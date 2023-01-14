@@ -4,6 +4,13 @@
  */
 
 
+import java.net.http.HttpClient;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  * TODO
  *
@@ -13,6 +20,14 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        String json = """
+            {
+                "name": "leo",
+                "sex": "man"
+            }
+            """;
+
+        HttpClient httpClient = HttpClient.newHttpClient();
+        httpClient.connectTimeout();
     }
 }
